@@ -12,7 +12,7 @@ searchBtn.addEventListener('click', () => {
 
 input.addEventListener('blur', () => {
   // transition 없이 즉시 닫기 위한 처리
-  searchBox.classList.add('instant-close');
+  searchBox.classList.add('instant-change');
   searchBox.classList.remove('active');
   searchBtn.style.display = 'inline-block';
 });
@@ -28,4 +28,16 @@ profileBtn.addEventListener('mouseenter', () => {
 // 마우스 벗어났을 때 → 원래대로
 profileBtn.addEventListener('mouseleave', () => {
   arrow.classList.remove('rotated');
+});
+
+
+const header = document.querySelector('.header')
+window.addEventListener('scroll', function () {
+  if (window.scrollY === 0){
+    header.classList.remove('instant-change');
+    header.style.background = "linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%)";
+  } else {
+    header.classList.add('instant-change');
+    header.style.background = "#000000";
+  }
 });

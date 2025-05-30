@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  transition: background .5s ease;
 }
 
 .header__left {
@@ -74,7 +75,7 @@
   display: inline-block;
   overflow: hidden;
   width: 0;
-  transition: width .3s ease-out;
+  /* transition: width .3s ease-out; */
 }
 
 
@@ -82,7 +83,7 @@
   width: 275px;
 }
 
-.search-box.instant-close {
+.instant-change {
   transition: none !important;
 }
 
