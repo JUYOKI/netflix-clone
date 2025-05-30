@@ -1,0 +1,246 @@
+.main {
+  position: relative;
+}
+
+
+/* 홈 화면 빌보드 */
+.billboard {
+  display: block;
+  margin-bottom: 350px;
+}
+
+
+.billboard .billboard-wraper {
+  position: relative;
+  height: auto; /* 또는 원하는 고정 높이 */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+
+.billboard .billboard-wraper img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg,rgba(0, 0, 0, .5) 50%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none; /* 클릭 방해 X */
+  z-index: 5;
+}
+
+/* 게임 배경 위에 표시되도록 위치 설정 */
+.game-highlight {
+  position: absolute;
+  top: 38%;
+  left: 3%;
+  right: 3%;
+  z-index: 10;
+  max-width: 670px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.game-card {
+  display: flex;
+  align-items: flex-start;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  flex-direction: column;
+}
+
+.game-cover {
+  display: flex;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 1;
+}
+
+.game-info.main {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.main-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ngame-logo {
+  max-width: 40px;
+  height: auto;
+}
+
+.game-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.game-info.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.game-tags {
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.circle-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #FFFFFF;
+  opacity: .7;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  transform: translateY(-1px); /* 수직 정렬 */
+}
+
+.membership {
+  font-size: 18px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 8px 0;
+  color: #FFFFFF;
+  font-weight: 500;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn {
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.btn.white {
+  background: white;
+  color: black;
+}
+
+
+.btn.gray {
+  background: rgba(142, 142, 142, 0.7);
+  color: white;
+}
+
+
+.btn img {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+
+/* 홈 화면 콘텐츠 */
+
+/* .contents-list {
+  position: relative;
+  z-index: 15;
+  background-color: #000000;
+  top: -150px;
+  padding: 0 70px;
+} */
+
+.contents-list {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  padding-left: 70px;
+  padding-right: 70px;
+  z-index: 15;
+  min-height: 400px;
+}
+
+.contents-container {
+  position: relative;
+  top: -140px;
+}
+
+.contents-container .contents {
+  margin-bottom: 50px;
+}
+.contents-container div:last-child {
+  margin-bottom: 0px;
+}
+
+.contents-container h2.contents-type {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.contents-container .contents-wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 25px;
+  gap: 5px;
+  overflow: visible;
+}
+
+.contents-container .contents-wrapper .content-thumbnail {
+  flex: 1 1 auto;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  transform-origin: center;
+}
+
+.contents-container .contents-wrapper .content-thumbnail img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.contents-container .contents-wrapper .content-thumbnail:hover {
+  transform: scale(1.4);
+  z-index: 30;
+}
+.contents-container .contents-wrapper .content-thumbnail:first-child {
+  transform-origin: left center;
+}
+
+.contents-container .contents-wrapper .content-thumbnail:last-child {
+  transform-origin: right center;
+}

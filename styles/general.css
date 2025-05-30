@@ -1,0 +1,14 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+img {
+  max-width: 100%;
+}

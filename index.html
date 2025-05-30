@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="./styles/general.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__left">
+      <a href="index.html" class="img-btn">
+        <img src="./assets/icons/logo.svg" alt="NETFLIX">
+      </a>
+      <div class="text-btns">
+        <a href="#" class="home active">홈</a>
+        <a href="#" class="series">시리즈</a>
+        <a href="#" class="movie">영화</a>
+        <a href="#" class="game">게임</a>
+        <a href="#" class="new">NEW! 요즘 대세 콘텐츠</a>
+        <a href="#" class="pick">내가 찜한 리스트</a>
+        <a href="#" class="language">언어별로 찾아보기</a>
+      </div>
+    </div>
+
+    <div class="header__right">
+      <div class="icon-btns">
+        <button class="search-btn">
+          <img src="./assets/icons/search.svg" alt="search">          
+        </button>
+        <div class="search-box">
+          <img src="./assets/icons/search.svg" alt="search">
+          <input type="text" placeholder="제목, 사람, 장르">
+        </div>
+        <button class="notification-btn">
+          <img src="./assets/icons/notification.svg" alt="notification">
+          <!-- 추후 추가 작업 -->
+          <!-- hover 시 알림 메뉴 -->
+          <!-- <div class="notifications"></div> -->
+        </button>
+      </div>
+      <div class="profile">
+        <div class="profile-btn">
+          <img src="./assets/icons/profile.png" alt="user profile">
+          <span class="material-icons arrow-icon">
+            arrow_drop_down
+          </span>
+        </div>
+        <!-- 추후 추가 작업 -->
+        <!-- hover 시 프로필 및 환경설정 -->
+        <!-- <div class="profile-content"></div> -->
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+    <div class="billboard">
+      <div class="billboard-wraper">
+        <img src="./assets/images/main.webp" alt="main image" class="background">
+      
+        <!-- 게임 소개 카드 HTML 구조 -->
+        <div class="game-highlight">
+          <div class="game-card">
+            <!-- 게임 정보 영역 -->
+            <div class="game-info main">
+              <!-- 게임 아이콘 -->
+              <img class="game-cover" src="./assets/icons/game.png" alt="블룬스 TD 6">
+              <div class="main-info-text">
+                <!-- N게임 로고 -->
+                <img class="ngame-logo" src="./assets/icons/n-game.webp" alt="N게임 로고">
+
+                <!-- 게임 제목 -->
+                <h2 class="game-title">블룬스 TD 6</h2>
+              </div>
+
+            </div>
+
+            <div class="game-info detail">
+              <!-- 장르 태그 -->
+              <div class="game-tags">모바일 게임 <span class="circle-dot"></span> 전략</div>
+
+              <!-- 멤버십 안내 -->
+              <div class="membership">멤버십에 포함되어 있습니다</div>
+
+              <!-- 게임 설명 -->
+              <p class="description">
+                다트를 연마하세요! 끝없이 흐르는 형형색색의 풍선이 원숭이 타워에 도달하지 못하도록 타워를 지켜내세요.
+                풍선을 터뜨릴수록 더 많은 새로운 능력과 영웅이 잠금 해제됩니다.
+              </p>
+
+              <!-- 버튼 2개 영역 -->
+              <div class="buttons">
+                <!-- 버튼 1: 모바일 게임 받기 -->
+                <button class="btn white">
+                  <img src="./assets/icons/download.svg" alt="다운로드 아이콘">
+                  모바일 게임 받기
+                </button>
+
+                <!-- 버튼 2: 디바이스로 보내기 -->
+                <button class="btn gray">
+                  <img src="./assets/icons/send.svg" alt="전송 아이콘">
+                  내 모바일 디바이스로 보내기
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gradient-overlay"></div>
+
+    </div>
+
+    <div class="contents-list">
+      <div class="contents-container">
+        <div class="contents new-contents">
+          <h2 class="contents-type">넷플릭스에 새로 올라온 콘텐츠</h2>
+          <div class="contents-wrapper">
+            <div class="content-thumbnail"><img src="./assets/images/new_01.webp" alt="new_01"></div>
+            <div class="content-thumbnail"><img src="./assets/images/new_02.jpg" alt="new_02"></div>
+            <div class="content-thumbnail"><img src="./assets/images/new_03.jpg" alt="new_03"></div>
+            <div class="content-thumbnail"><img src="./assets/images/new_04.jpg" alt="new_04"></div>
+            <div class="content-thumbnail"><img src="./assets/images/new_05.webp" alt="new_05"></div>
+            <div class="content-thumbnail"><img src="./assets/images/new_06.webp" alt="new_06"></div>
+          </div>
+        </div>
+
+        <div class="contents k-series">
+          <h2 class="contents-type">한국 시리즈</h2>
+          <div class="contents-wrapper">
+            <div class="content-thumbnail"><img src="./assets/images/k-series_01.webp" alt="k-series_01"></div>
+            <div class="content-thumbnail"><img src="./assets/images/k-series_02.jpg" alt="k-series_02"></div>
+            <div class="content-thumbnail"><img src="./assets/images/k-series_03.jpg" alt="k-series_03"></div>
+            <div class="content-thumbnail"><img src="./assets/images/k-series_04.webp" alt="k-series_04"></div>
+            <div class="content-thumbnail"><img src="./assets/images/k-series_05.jpg" alt="k-series_05"></div>
+            <div class="content-thumbnail"><img src="./assets/images/k-series_06.jpg" alt="k-series_06"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
